@@ -1,12 +1,23 @@
 import './App.css';
 import { useState } from 'react'
 
+/**
+ * Given the following jsx can you use react state to add the ability to.
+ * 
+ * 1. Add a new todo to list
+ * 2. Toggle a todo
+ * 3. Remove a todo from list
+ * 
+ * Don't worry about styling 
+ */
+
 function App() {
-  
   return (
     <div className="App">
       <h1>Todo list</h1>
-      <input type="text"/>
+      <form>
+        <input type="text"/>
+      </form>
       <ul>
         <li>
           one
@@ -24,56 +35,5 @@ function App() {
     </div>
   );
 }
-
-
-// function App() {
-//   const [todos,setTodos] = useState([])
-//   // const [checked, setChecked] = useState([])
-//   const [textBox, setTexBox] = useState('')
-
-//   const onSubmit = (e) => {
-//     e.preventDefault()
-//     setTodos([...todos, {name: textBox, checked: false}])
-//     setTexBox('')
-//   }
-
-//   const handleDelete = (x) => {
-//     let i = todos.indexOf(x)
-//     let todoCopy = [...todos]
-//     todoCopy.splice(i, 1)
-//     setTodos(todoCopy)
-//   }
-
-//   const toggleChecked = (x) => {
-//     let i = todos.indexOf(x)
-//     let todoCopy = [...todos]
-//     todoCopy[i].checked = !todoCopy[i].checked
-//     setTodos(todoCopy)
-//   }
-
-
-//   return (
-//     <div className="App">
-//       <h1>ToDo list</h1>
-//       <form onSubmit={onSubmit}>
-//         <input type="text" value={textBox} onChange={x => {
-//           setTexBox(x.target.value)
-//         }}/>
-//       </form>
-//       <ul>
-//         {todos.map(x => (
-//           <li key={x.name}>
-//             <span
-//               className={x.checked ? 'checked' : ''} 
-//               onClick={() => toggleChecked(x)}
-//               >{x.name}
-//             </span>
-//             <span className='delete-button' onClick={() => handleDelete(x.name)}>x</span>
-//           </li>) 
-//         )}
-//       </ul>
-//     </div>
-//   );
-// }
 
 export default App;
