@@ -5,6 +5,12 @@
   width: 500px;
 }
 
+.App-http {
+  margin: auto;
+  margin-top: 100px;
+  width: 500px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -72,6 +78,7 @@ li {
   color: red;
   display: block;
   cursor: pointer;
+  text-decoration: none !important;
 }
 
 .checked {
